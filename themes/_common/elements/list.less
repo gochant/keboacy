@@ -1,0 +1,30 @@
+// 因为 bootstrap 写死了该属性，所以这里需要覆盖
+.list-group-item {
+    padding: @list-padding-base-vertical @list-padding-base-horizontal;
+}
+
+.list-group-sm {
+    .list-group-item {
+        padding: @list-padding-small-vertical @list-padding-small-horizontal;
+    }
+}
+
+
+.list-group-simple {
+    margin-top: -1px;
+
+    .list-group-item {
+        border-left-width: 0;
+        border-right-width: 0;
+    }
+}
+
+// 列表（带悬停样式）
+
+.list-group-hover {
+    .list-group-item:not(.k-state-selected):hover {
+        color: #555;
+        text-decoration: none;
+        background-color: #f5f5f5;
+    }
+}

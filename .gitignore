@@ -1,0 +1,7 @@
+node_modules
+*.log
+bower_components
+*.js-temp
+vwd.webinfo
+.idea
+.bowerrc
