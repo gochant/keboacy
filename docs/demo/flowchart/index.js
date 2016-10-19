@@ -63,7 +63,7 @@ var vm = kendo.observable({
         nodes: [{
             id: 'n2',
             index: 2,
-            left: "420",
+            left: "220",
             top: "53",
             text: "测试2"
         }, {
@@ -76,7 +76,7 @@ var vm = kendo.observable({
         }, {
             id: '-1',
             index: -1,
-            left: "771",
+            left: "471",
             top: "88",
             text: "结束",
             isSource: false

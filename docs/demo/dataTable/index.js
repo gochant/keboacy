@@ -41,7 +41,18 @@ var vm = {
             Gender: '男',
             Age: 13
         }]
-    })
+    }),
+    getSelect: function () {
+        var inst = kendo.widgetInstance($('[data-role=datatable]'));
+        console.log(inst.select());
+    },
+    filterData: function () {
+        vm.list.filter({
+            field: 'Age',
+            operator: 'gt',
+            value: 40
+        });
+    }
 }
 
 kendo.bind($('body'), vm);
