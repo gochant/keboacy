@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link href="../../vendor/keboacy/css/default.css" rel="stylesheet" />
+    <style>
+        .toolbar {
+        }
+
+        html, body {
+        }
+
+        .flow {
+            margin: 20px;
+            height: 300px;
+            border: 1px solid #A9B0B8;
+        }
+         .flow-designer {
+            margin: 20px;
+            height: 500px;
+            border: 1px solid #A9B0B8;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>流程图只读</h2>
+    <div class="flow" data-role="flow"
+         data-bind="value: flow"></div>
+    <h2>设计器</h2>
+    <div class="toolbar">
+        <button id="getData">获取数据</button>
+        <button id="removeCon">移除连接线</button>
+        <button id="addCon">添加连接线</button>
+        <button id="addNode">添加节点</button>
+        <button id="changeNode">更改节点</button>
+        <button id="deleteNode">删除选中节点</button>
+        <button id="changeCon">更改连接线</button>
+    </div>
+    <div class="flow flow-designer"  data-role="flow" data-editable="true" data-draggable="true" data-selectable="true"
+         data-bind="value: design"></div>
+
+    <script src="../../vendor/jquery.min.js"></script>
+    <script src="../../vendor/lodash.min.js"></script>
+    <script src="../../vendor/kendo.ui.core.min.js"></script>
+    <script src="../../vendor/jsPlumb-2.1.7-min.js"></script>
+    <script src="../../vendor/keboacy/js/keboacy.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "name": "keboacy",
+    "version": "0.1.0",
+    "homepage": "",
+    "description": "",
+    "url": "https://github.com/gochant/keboacy",
+    "devDependencies": {
+        "kss": "^2.4.0",
+        "grunt": "^0.4.3",
+        "grunt-contrib-clean": "^0.6.0",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-copy": "^0.8.0",
+        "grunt-contrib-less": "^1.0.1",
+        "grunt-contrib-pug": "^1.0.0",
+        "grunt-contrib-uglify": "^0.6.0",
+        "grunt-kss": "^4.0.0"
+    }
+}

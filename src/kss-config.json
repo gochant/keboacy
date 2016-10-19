@@ -1,0 +1,18 @@
+{
+  "title": "Kebo'",
+  "source": [ "./" ],
+  "destination": "../docs/styleguide",
+  "template": "../bower_components/kss-node-template-tiny",
+  "css": [
+    "../vendor/keboacy/css/default.css"
+  ],
+  "js": [
+    "../vendor/jquery.min.js",
+    "../vendor/bootstrap.min.js",
+    "../vendor/kendo.ui.core.min.js",
+    "../vendor/lodash.min.js",
+    "../vendor/keboacy/js/keboacy.min.js",
+    "../vendor/boot.js"
+  ],
+  "xdemo": false
+}

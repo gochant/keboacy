@@ -1,29 +1,30 @@
 {
-  "name": "keboacy",
-  "description": "kendo ui core + bootstrap legacy",
-  "homepage": "",
-  "version": "0.1.0",
-  "main": [],
-  "ignore": [
-    "demo",
-    "assets",
-    "docs",
-    "src",
-    "tools"
-  ],
-  "repository": {
-    "type": "https",
-    "url": "https://github.com/gochant/keboacy.git"
-  },
-  "dependencies": {
-    "jquery": "^1.11.x"
-  },
-  "devDependencies": {
-    "lodash": "^4.16.4",
-    "kendo-ui": "2015.3.1111",
-    "jSignature": "^2.1.0",
-    "jsPlumb": "2.1.7",
-    "bootstrap": "^3.3.7",
-    "font-awesome": "^4.6.3"
-  }
+    "name": "keboacy",
+    "description": "kendo ui core + bootstrap legacy",
+    "homepage": "",
+    "version": "0.1.0",
+    "main": [ ],
+    "ignore": [
+        "demo",
+        "assets",
+        "docs",
+        "src",
+        "tools"
+    ],
+    "repository": {
+        "type": "https",
+        "url": "https://github.com/gochant/keboacy.git"
+    },
+    "dependencies": {
+        "jquery": "^1.11.x"
+    },
+    "devDependencies": {
+        "lodash": "^4.16.4",
+        "kendo-ui": "2015.3.1111",
+        "jSignature": "^2.1.0",
+        "jsPlumb": "2.1.7",
+        "bootstrap": "^3.3.7",
+        "font-awesome": "^4.6.3",
+        "kss-node-template-tiny": "kss-node-template-tiny#master"
+    }
 }
