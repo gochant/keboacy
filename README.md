@@ -19,6 +19,7 @@ Kendo and Bootstrap's legacy
 - [Flowchart](https://github.com/gochant/keboacy/tree/master/src/widgets/flowchart)
 - [Signature](https://github.com/gochant/keboacy/tree/master/src/widgets/signature)
 - [CheckboxList](https://github.com/gochant/keboacy/tree/master/src/widgets/checkboxlist)
+- Validator2
 - File
 
 ### Normal jQuery Plugins

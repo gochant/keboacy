@@ -100,3 +100,9 @@ $("#dropdown").kendoDropDownList({
         { text: "Subtitle", value: 5 }
     ]
 });
+
+$('#submit').on('click', function(){
+
+    var validator = kendo.widgetInstance($('[data-validate-form]'));
+    validator.validate();
+})
