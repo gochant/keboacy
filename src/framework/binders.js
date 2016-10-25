@@ -1,12 +1,4 @@
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
-
+(function(){
     /**
      * kendo ui 普通 date 绑定
      * @example
@@ -33,7 +25,7 @@
                     date = kendo.parseDate(date);
                 }
                 var format = $(this.element).data('format') ||
-                 kendo._extractFormat('yyyy/MM/dd');
+                    kendo._extractFormat('yyyy/MM/dd');
                 dateTxt = kendo.toString(date, format);
             }
             if ('value' in this.element) {
@@ -47,5 +39,4 @@
             this.bindings.date.set(value);
         }
     });
-
-}));
+})();

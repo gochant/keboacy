@@ -1,11 +1,4 @@
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
+(function(){
     var ui = kendo.ui;
     var Widget = ui.Widget;
 
@@ -36,7 +29,7 @@
                 '</span>' +
                 '</label>' +
                 '<input type="text" class="form-control" readonly>' +
-            '</div>';
+                '</div>';
 
             me.wrapper = $(parent).addClass('k-widget k-file').addClass(elementDom.className);
             element.replaceWith(me.wrapper);
@@ -53,6 +46,4 @@
     });
 
     kendo.ui.plugin(File);
-
-
-}));
+})();

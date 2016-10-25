@@ -1,20 +1,14 @@
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'bootstrap'], factory);
-    } else {
-        factory(jQuery);
-    }
-}(function ($) {
+(function(){
     "use strict";
     var coreUtil = {};
 
     coreUtil.randomString = function () {
         return Math.random().toString(36).substring(7);
-    }
+    };
 
     coreUtil.isFalsy = function (o) {
         return o == null || o == false;
-    }
+    };
 
     $.fn.dynamicTab = function () {
         var $parent = this;
@@ -80,6 +74,6 @@
             $tab.find('.active')[direction]().find('[data-toggle=tab]').tab('show');
         });
     }
+})();
 
-}));
 

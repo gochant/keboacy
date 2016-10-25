@@ -1,11 +1,4 @@
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui', 'jsplumb'], factory);
-    } else {
-        factory(jQuery, kendo, window.jsPlumb);
-    }
-}(function ($, kendo, jsPlumb) {
-
+(function(){
     var ui = kendo.ui;
     var Widget = ui.Widget;
     var DataBoundWidget = ui.DataBoundWidget;
@@ -715,6 +708,4 @@
     });
 
     kendo.ui.plugin(Flow);
-
-
-}));
+})();

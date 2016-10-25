@@ -1,11 +1,4 @@
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
+(function(){
     var ui = kendo.ui;
     var Widget = ui.Widget;
     var ListView = kendo.ui.ListView;
@@ -16,7 +9,6 @@
     var SUBTREE = 'k-tree-subtree';
 
     var Selectable = kendo.ui.Selectable;
-
 
     // kendo ui selectable 会进行冒泡，导致行为不符合预期
     var TreeSelectable = Selectable.extend({
@@ -59,23 +51,23 @@
         _defaultTemplate: function (options) {
 
             return '<div class="k-tree-item">' +
-                        '<div class="k-tree-inner">' +
-                            '# for(var i = 0, len = level(); i < len; i++){ #' +
-                                '<span class="k-tree-indent"></span>' +
-                            '# } #' +
-                            '# if(hasChildren){ #' +
-                                '<a class="k-tree-switcher"></a>' +
-                            '# } else{ #' +
-                                '<span class="k-tree-switcher-noop"></span>' +
-                            '# } #' +
-                            '<span class="k-tree-text">' +
-                                '#: ' + options.dataTextField + ' #' +
-                            '</span>' +
-                        '</div>' +
-                        '# if(hasChildren){ #' +
-                            '<div class="k-tree-subtree"></div>' +
-                        '# } #' +
-                    '</div>';
+                '<div class="k-tree-inner">' +
+                '# for(var i = 0, len = level(); i < len; i++){ #' +
+                '<span class="k-tree-indent"></span>' +
+                '# } #' +
+                '# if(hasChildren){ #' +
+                '<a class="k-tree-switcher"></a>' +
+                '# } else{ #' +
+                '<span class="k-tree-switcher-noop"></span>' +
+                '# } #' +
+                '<span class="k-tree-text">' +
+                '#: ' + options.dataTextField + ' #' +
+                '</span>' +
+                '</div>' +
+                '# if(hasChildren){ #' +
+                '<div class="k-tree-subtree"></div>' +
+                '# } #' +
+                '</div>';
         },
         _initRoot: function () {
         },
@@ -166,6 +158,4 @@
     });
 
     kendo.ui.plugin(Tree);
-
-
-}));
+})();

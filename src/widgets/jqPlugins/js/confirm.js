@@ -1,11 +1,4 @@
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'bootstrap'], factory);
-    } else {
-        factory(jQuery);
-    }
-}(function ($) {
-
+(function(){
     // modal confirm
 
     var TPL_CONFIRM = '<div class="modal fade v-modal-confirm" id="v-modal-confirm" tabindex="-1">' +
@@ -63,4 +56,4 @@
     // popover Confirm
 
     // $.popoverConfirm =
-}));
+})();

@@ -1,15 +1,9 @@
-/*! keboacy - v0.1.0 - 2016-10-19 */
-;(function( window, undefined ){
+/*! keboacy - v0.1.0 - 2016-10-25 */
+(function (f, define) {
+    define(['jquery', 'kendo-ui'], f);
+})(function ($, kendo) {
     'use strict';
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
-
+(function(){
     /**
      * kendo ui 普通 date 绑定
      * @example
@@ -36,7 +30,7 @@
                     date = kendo.parseDate(date);
                 }
                 var format = $(this.element).data('format') ||
-                 kendo._extractFormat('yyyy/MM/dd');
+                    kendo._extractFormat('yyyy/MM/dd');
                 dateTxt = kendo.toString(date, format);
             }
             if ('value' in this.element) {
@@ -50,17 +44,9 @@
             this.bindings.date.set(value);
         }
     });
+})();
 
-}));
-
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
+(function(){
     var DataSource = kendo.data.DataSource;
     var HierarchicalDataSource = kendo.data.HierarchicalDataSource;
     var extend = $.extend;
@@ -217,15 +203,9 @@
     });
 
     kendo.data.BackendApiDataSource = BackendApiDataSource;
-}));
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
 
+})();
+(function(){
     // widgets checked binder
     var Binder = kendo.data.Binder;
     var binders = kendo.data.binders;
@@ -328,7 +308,7 @@
             }
 
             this.value(oldValue)
-                        //this.trigger("dataBound");
+            //this.trigger("dataBound");
         },
         items: function () {
             return this.element.children();
@@ -358,7 +338,7 @@
                 });
                 return list;
             } else {
-                // ���� DOM
+                // 更新 DOM
                 var that = this,
                     list = $.isArray(value) ? value : (typeof value === "string" ? [value] : []);
 
@@ -371,14 +351,8 @@
         }
     });
     kendo.ui.plugin(CheckBoxList);
-}));
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
+})();
+(function(){
     var ui = kendo.ui,
         Widget = ui.Widget;
     var ListView = kendo.ui.ListView;
@@ -449,21 +423,21 @@
 
                 var tableHtml =
                     '<div class="k-datatable-header k-data-inject">' +
-                        '<table class="table no-margin">' +
-                            '<colgroup></colgroup>' +
-                            '<thead></thead>' +
-                        '</table>' +
+                    '<table class="table no-margin">' +
+                    '<colgroup></colgroup>' +
+                    '<thead></thead>' +
+                    '</table>' +
                     '</div>' +
                     '<div class="k-datatable-content grow k-data-inject">' +
-                        '<table class="table no-margin">' +
-                            '<colgroup></colgroup>' +
-                            '<tbody></tbody>' +
-                        '</table>' +
+                    '<table class="table no-margin">' +
+                    '<colgroup></colgroup>' +
+                    '<tbody></tbody>' +
+                    '</table>' +
                     '</div>';
                 element.find('.k-data-inject').remove();
                 element.append(tableHtml);
                 element.on('click', '.sortable', function (e) {
-     
+
                     var $target = $(e.currentTarget);
                     var field = $target.attr('data-prop');
                     var dir = 'asc';
@@ -514,16 +488,9 @@
     });
 
     kendo.ui.plugin(DataTable);
-}));
+})();
 
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
+(function(){
     var ui = kendo.ui;
     var Widget = ui.Widget;
 
@@ -554,7 +521,7 @@
                 '</span>' +
                 '</label>' +
                 '<input type="text" class="form-control" readonly>' +
-            '</div>';
+                '</div>';
 
             me.wrapper = $(parent).addClass('k-widget k-file').addClass(elementDom.className);
             element.replaceWith(me.wrapper);
@@ -571,18 +538,9 @@
     });
 
     kendo.ui.plugin(File);
+})();
 
-
-}));
-
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui', 'jsplumb'], factory);
-    } else {
-        factory(jQuery, kendo, window.jsPlumb);
-    }
-}(function ($, kendo, jsPlumb) {
-
+(function(){
     var ui = kendo.ui;
     var Widget = ui.Widget;
     var DataBoundWidget = ui.DataBoundWidget;
@@ -1292,18 +1250,9 @@
     });
 
     kendo.ui.plugin(Flow);
+})();
 
-
-}));
-
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'bootstrap'], factory);
-    } else {
-        factory(jQuery);
-    }
-}(function ($) {
-
+(function(){
     // modal confirm
 
     var TPL_CONFIRM = '<div class="modal fade v-modal-confirm" id="v-modal-confirm" tabindex="-1">' +
@@ -1361,25 +1310,19 @@
     // popover Confirm
 
     // $.popoverConfirm =
-}));
+})();
 
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'bootstrap'], factory);
-    } else {
-        factory(jQuery);
-    }
-}(function ($) {
+(function(){
     "use strict";
     var coreUtil = {};
 
     coreUtil.randomString = function () {
         return Math.random().toString(36).substring(7);
-    }
+    };
 
     coreUtil.isFalsy = function (o) {
         return o == null || o == false;
-    }
+    };
 
     $.fn.dynamicTab = function () {
         var $parent = this;
@@ -1445,17 +1388,11 @@
             $tab.find('.active')[direction]().find('[data-toggle=tab]').tab('show');
         });
     }
+})();
 
-}));
 
 
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery'], factory);
-    } else {
-        factory(jQuery);
-    }
-}(function ($) {
+(function(){
     "use strict";
 
     var pluginName = "submenu";
@@ -1576,16 +1513,9 @@
 
         });
     };
-}));
+})();
 
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui', 'jSignature'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
+(function(){
     var ui = kendo.ui;
     var Widget = ui.Widget;
     var DataBoundWidget = ui.DataBoundWidget;
@@ -1641,18 +1571,9 @@
     });
 
     kendo.ui.plugin(Signature);
+})();
 
-
-}));
-
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
+(function(){
     var ui = kendo.ui;
     var Widget = ui.Widget;
     var ListView = kendo.ui.ListView;
@@ -1663,7 +1584,6 @@
     var SUBTREE = 'k-tree-subtree';
 
     var Selectable = kendo.ui.Selectable;
-
 
     // kendo ui selectable 会进行冒泡，导致行为不符合预期
     var TreeSelectable = Selectable.extend({
@@ -1706,23 +1626,23 @@
         _defaultTemplate: function (options) {
 
             return '<div class="k-tree-item">' +
-                        '<div class="k-tree-inner">' +
-                            '# for(var i = 0, len = level(); i < len; i++){ #' +
-                                '<span class="k-tree-indent"></span>' +
-                            '# } #' +
-                            '# if(hasChildren){ #' +
-                                '<a class="k-tree-switcher"></a>' +
-                            '# } else{ #' +
-                                '<span class="k-tree-switcher-noop"></span>' +
-                            '# } #' +
-                            '<span class="k-tree-text">' +
-                                '#: ' + options.dataTextField + ' #' +
-                            '</span>' +
-                        '</div>' +
-                        '# if(hasChildren){ #' +
-                            '<div class="k-tree-subtree"></div>' +
-                        '# } #' +
-                    '</div>';
+                '<div class="k-tree-inner">' +
+                '# for(var i = 0, len = level(); i < len; i++){ #' +
+                '<span class="k-tree-indent"></span>' +
+                '# } #' +
+                '# if(hasChildren){ #' +
+                '<a class="k-tree-switcher"></a>' +
+                '# } else{ #' +
+                '<span class="k-tree-switcher-noop"></span>' +
+                '# } #' +
+                '<span class="k-tree-text">' +
+                '#: ' + options.dataTextField + ' #' +
+                '</span>' +
+                '</div>' +
+                '# if(hasChildren){ #' +
+                '<div class="k-tree-subtree"></div>' +
+                '# } #' +
+                '</div>';
         },
         _initRoot: function () {
         },
@@ -1813,8 +1733,5 @@
     });
 
     kendo.ui.plugin(Tree);
-
-
-}));
-
-}( window ));
+})();
+}, typeof define == 'function' && define.amd ? define : function (_, f) { f(jQuery, window.kendo); });

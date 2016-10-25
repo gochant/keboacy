@@ -1,11 +1,4 @@
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui', 'jSignature'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
+(function(){
     var ui = kendo.ui;
     var Widget = ui.Widget;
     var DataBoundWidget = ui.DataBoundWidget;
@@ -61,6 +54,4 @@
     });
 
     kendo.ui.plugin(Signature);
-
-
-}));
+})();

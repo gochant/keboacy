@@ -1,11 +1,4 @@
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
+(function(){
     var DataSource = kendo.data.DataSource;
     var HierarchicalDataSource = kendo.data.HierarchicalDataSource;
     var extend = $.extend;
@@ -162,4 +155,5 @@
     });
 
     kendo.data.BackendApiDataSource = BackendApiDataSource;
-}));
+
+})();

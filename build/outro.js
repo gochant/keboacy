@@ -1,1 +1,1 @@
-}( window ));
+}, typeof define == 'function' && define.amd ? define : function (_, f) { f(jQuery, window.kendo); });

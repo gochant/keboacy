@@ -1,10 +1,4 @@
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
+(function(){
     var ui = kendo.ui,
         Widget = ui.Widget;
     var ListView = kendo.ui.ListView;
@@ -75,21 +69,21 @@
 
                 var tableHtml =
                     '<div class="k-datatable-header k-data-inject">' +
-                        '<table class="table no-margin">' +
-                            '<colgroup></colgroup>' +
-                            '<thead></thead>' +
-                        '</table>' +
+                    '<table class="table no-margin">' +
+                    '<colgroup></colgroup>' +
+                    '<thead></thead>' +
+                    '</table>' +
                     '</div>' +
                     '<div class="k-datatable-content grow k-data-inject">' +
-                        '<table class="table no-margin">' +
-                            '<colgroup></colgroup>' +
-                            '<tbody></tbody>' +
-                        '</table>' +
+                    '<table class="table no-margin">' +
+                    '<colgroup></colgroup>' +
+                    '<tbody></tbody>' +
+                    '</table>' +
                     '</div>';
                 element.find('.k-data-inject').remove();
                 element.append(tableHtml);
                 element.on('click', '.sortable', function (e) {
-     
+
                     var $target = $(e.currentTarget);
                     var field = $target.attr('data-prop');
                     var dir = 'asc';
@@ -140,4 +134,4 @@
     });
 
     kendo.ui.plugin(DataTable);
-}));
+})();

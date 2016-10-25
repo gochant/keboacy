@@ -1,11 +1,4 @@
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'kendo-ui'], factory);
-    } else {
-        factory(jQuery, kendo);
-    }
-}(function ($, kendo) {
-
+(function(){
     // widgets checked binder
     var Binder = kendo.data.Binder;
     var binders = kendo.data.binders;
@@ -108,7 +101,7 @@
             }
 
             this.value(oldValue)
-                        //this.trigger("dataBound");
+            //this.trigger("dataBound");
         },
         items: function () {
             return this.element.children();
@@ -138,7 +131,7 @@
                 });
                 return list;
             } else {
-                // ¸üÐÂ DOM
+                // æ›´æ–° DOM
                 var that = this,
                     list = $.isArray(value) ? value : (typeof value === "string" ? [value] : []);
 
@@ -151,4 +144,4 @@
         }
     });
     kendo.ui.plugin(CheckBoxList);
-}));
+})();
