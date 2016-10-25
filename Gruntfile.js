@@ -3,10 +3,6 @@
 
 module.exports = function (grunt) {
 
-    var thirdPath = '../../node_modules'; // '../../bower_components';
-    var nodeModulePath = './node_modules';
-    var bowerPath = '../../bower_components';
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {

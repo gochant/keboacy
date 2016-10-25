@@ -14,57 +14,22 @@ Kendo and Bootstrap's legacy
 
 以下是采用 MVVM 模式，支持数据绑定：
 
-#### DataTable
-
-轻量级的表格控件
-
-[文档](https://github.com/gochant/keboacy/tree/master/src/widgets/dataTable)
-
-#### Tree
-
-轻量级的树控件
-
-[文档](https://github.com/gochant/keboacy/tree/master/src/widgets/tree)
-
-#### Flowchart
-
-流程图显示/设计控件
-
-[文档](https://github.com/gochant/keboacy/tree/master/src/widgets/flowchart)
-
-#### Signature
-
-签名控件
-
-[文档](https://github.com/gochant/keboacy/tree/master/src/widgets/signature)
-
-#### CheckboxList
-
-复选框列表
-
-[文档](https://github.com/gochant/keboacy/tree/master/src/widgets/checkboxlist)
-
-#### File
-
-默认文件上传 input 的美化版
+- [DataTable](https://github.com/gochant/keboacy/tree/master/src/widgets/dataTable)
+- [Tree](https://github.com/gochant/keboacy/tree/master/src/widgets/tree)
+- [Flowchart](https://github.com/gochant/keboacy/tree/master/src/widgets/flowchart)
+- [Signature](https://github.com/gochant/keboacy/tree/master/src/widgets/signature)
+- [CheckboxList](https://github.com/gochant/keboacy/tree/master/src/widgets/checkboxlist)
+- File
 
 ### Normal jQuery Plugins
 
 以下是普通 jQuery 插件，可脱离 Kendo UI 使用：
 
-#### dynamicTab
+- dynamicTab：Bootstrap Tab 组件的一点点增强
+- submenu：一个侧边栏主菜单插件
+- modalConfirm：确认对话框，代替 window.confirm
 
-Bootstrap Tab 组件的一点点增强
-
-#### submenu
-
-一个侧边栏主菜单插件
-
-#### modalConfirm
-
-确认对话框，代替 window.confirm
-
-## 主题样式
+## Styles & Themes
 
 定制了一个 Bootstrap & Kendo UI 主题，精简了一些不必要的样式，同时采用相同的变量设置，
 使两者风格浑然一体，一些示例：
@@ -77,9 +42,9 @@ Bootstrap Tab 组件的一点点增强
 
 样式风格指南
 
-- [Styleguide](http://localhost:24144/docs/styleguide/)
+- [Styleguide](https://gochant.github.io/keboacy/styleguide/)
 
-## 框架
+## Framework
 
 ### Binders
 
@@ -90,10 +55,10 @@ Bootstrap Tab 组件的一点点增强
 - BackendApiDataSource: 与后台交互的 DataSource
 - BackendApiDataObject: 可与后台交互的可观察对象
 
-## 文档
+## Doc
 
 待完善
 
-## 协议
+## License
 
 MIT
