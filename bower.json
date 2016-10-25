@@ -9,7 +9,7 @@
         "assets",
         "docs",
         "src",
-        "tools"
+        "build"
     ],
     "repository": {
         "type": "https",
