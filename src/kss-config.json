@@ -4,15 +4,15 @@
   "destination": "../docs/styleguide",
   "template": "../bower_components/kss-node-template-tiny",
   "css": [
-    "../vendor/keboacy/css/default.css"
+    "../assets/keboacy/css/default.css"
   ],
   "js": [
-    "../vendor/jquery.min.js",
-    "../vendor/bootstrap.min.js",
-    "../vendor/kendo.ui.core.min.js",
-    "../vendor/lodash.min.js",
-    "../vendor/keboacy/js/keboacy.min.js",
-    "../vendor/boot.js"
+    "../assets/jquery.min.js",
+    "../assets/bootstrap.min.js",
+    "../assets/kendo.ui.core.min.js",
+    "../assets/lodash.min.js",
+    "../assets/keboacy/js/keboacy.min.js",
+    "../assets/boot.js"
   ],
   "xdemo": false
 }

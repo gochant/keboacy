@@ -39,7 +39,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'dist/',
                     src: '**/*',
-                    dest: 'docs/vendor/keboacy/'
+                    dest: 'docs/assets/keboacy/'
                 }]
             },
             style: {
@@ -92,7 +92,7 @@ module.exports = function (grunt) {
         clean: {
             dist: [
                 'dist/',
-                'docs/vendor/keboacy'
+                'docs/assets/keboacy'
             ]
         },
         uglify: {
